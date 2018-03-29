@@ -1,0 +1,24 @@
+<div id="wrapper">
+    <h2>Update Product</h2>
+    <form id="form" (submit)="addProduct(productName._id)">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input [(ngModel)]="productName.name" name="name"  type="text" class="form-control" id="name" autocomplete="off">
+        <p style="color: red;" *ngIf="errors['name']">{{ errors.name }}</p>
+      </div>
+      <div class="form-group">
+        <label for="type">Qty:</label>
+        <input [(ngModel)]="productName.qty" name="qty" type="number" class="form-control" id="qty" autocomplete="off">
+        <p style="color: red;" *ngIf="errors['qty']">{{ errors.qty }}</p>
+      </div>
+      <div class="form-group">
+      <label for="type">Price:</label>
+      <input [(ngModel)]="productName.price" name="price" type="number" class="form-control" id="price" autocomplete="off">
+      <p style="color: red;" *ngIf="errors['price']">{{ errors.price }}</p>
+    </div>
+      <div id="btn">
+      <button (click)="getProduct(productName._id)" type="button" class="btn btn-primary">RESET</button>
+      <button type="submit" class="btn btn-success">UPDATE</button>
+      </div>
+    </form>
+  </div>

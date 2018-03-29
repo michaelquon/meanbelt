@@ -1,0 +1,10 @@
+<div id="wrapper">
+    <h2>Product Details</h2><br>
+    <h4><strong>Name:&nbsp;&nbsp;</strong>{{ productName.name }}</h4>
+    <h4><strong>Qty:&nbsp;&nbsp;</strong>{{ productName.qty }}</h4>
+    <h4><strong>Price:&nbsp;&nbsp;</strong>${{ productName.price }}</h4>
+    <div>
+    <button (click)="getHome()" type="button" class="btn btn-primary">Back</button>
+    <button (click)="deleteProduct(productName['_id'])" type="button" [disabled]="disable()" class="btn btn-danger">Delete</button>
+    </div>
+    </div>

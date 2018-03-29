@@ -1,0 +1,14 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+#form{
+    width: 40rem;
+}
+#skills{
+    width: 37rem;
+    margin-left: 3rem;
+}
+#wrapper{
+    margin-left: 2rem;
+}
+#btn{
+    margin-left: 15rem;
+}

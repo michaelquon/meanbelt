@@ -1,0 +1,29 @@
+<div id="wrapper">
+  <h2>Product List</h2>
+  <button id="addbtn" (click)="getNew()" type="button" class="btn btn-primary">Add New Products</button>
+  <table id="product-table" class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Qty</th>
+        <th scope="col">Price</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of products">
+        <td>{{i._id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.qty}}</td>
+        <td>${{i.price}}</td>
+        <td>
+          <button (click)="getEdit(i['_id'])" type="button" class="btn btn-primary">Edit</button>
+          <button (click)="getDetail(i['_id'])" type="button" class="btn btn-primary">Details</button>&nbsp;
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+

@@ -1,0 +1,11 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+#product-table{
+    width: 50rem;
+}
+#wrapper{
+    margin-left: 2rem;
+}
+#addbtn{
+    margin-left: 44%;
+    margin-bottom: 5px;
+}
