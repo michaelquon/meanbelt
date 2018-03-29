@@ -11,15 +11,14 @@ app.use(express.static(path.join(__dirname + '/meanbelt-app/dist')));
 
 const ProductsSchema = new mongoose.Schema({
     name: {type: String, required: true, unique: true, minlength: 3},
-    qty: {type: Number, required: true},
-    price: {type: Number, required: true}},
+    qty: {type: Number, required: true, min: 0},
+    price: {type: Number, required: true, min: 0}},
     {timeStamps: true});
    
     mongoose.model('Products', ProductsSchema);
     var Products = mongoose.model('Products')
 
     app.get('/products', (req, res)=>{
-        console.log("Getting all Products from Server")
         Products.find({}, (err, products)=>{
             if(err){
                 console.log(err);

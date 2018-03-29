@@ -37,10 +37,16 @@ export class NewComponent implements OnInit {
             if(data['errors']['qty']['kind']== 'required'){
               this.errors = {name: "", qty: "Quantity is required", price: ""}
             }
+            else if(data['errors']['qty']['kind']=='min'){
+              this.errors = {name: "", qty: "Cannot have a 0 value", price: ""}
+            }
         }
         else if(data['errors']['price']){
           if(data['errors']['price']['kind']== 'required'){
             this.errors = {name: "", qty: "", price: "Price is required"}
+        }
+        else if(data['errors']['price']['kind']=='min'){
+          this.errors = {name: "", qty: "", price: "Cannot have a 0 value"}
         }
       }
       }
